@@ -1,14 +1,12 @@
-# Welcome to your CDK TypeScript project!
-
-This is a blank project for TypeScript development with CDK.
-
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+# SNS - Lambda throttling PoC
 
 ## Useful commands
-
- * `npm run build`   compile typescript to js
- * `npm run watch`   watch for changes and compile
- * `npm run test`    perform the jest unit tests
  * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
  * `cdk synth`       emits the synthesized CloudFormation template
+
+## Instructions
+You need to have NodeJS installed locally to deploy this PoC. 
+
+Install AWS CDK: `npm i -g aws-cdk` and install the packages used in this repository: `npm ci`. 
+
+Perform a deployment using `cdk deploy`. It will create the Lambdas, SNS, DynamoDB table, etc. and will output a series of CLI commands that can be used to invoke the "producer" Lambda with various payloads.
